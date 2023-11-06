@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="ligh">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxMap Links</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/icon.svg" type="image/x-icon">
+</head>
+<body>
+    <div id="container">
+
+        <!-- Pofile -->
+        <div id="profile">
+            <img src="./assets/LogoTaxC.png" alt="Logo TaxMap Tributos">
+            <!-- <p>@taxmap_consultoria</p> -->
+        </div>
+
+        <!-- switch dark mode / light mode -->
+        <div id="switch" onclick="toggleMode()">
+            <button></button>
+            <span></span>
+        </div>
+
+        <ul>
+            <div>
+                <li>
+                    <a href="https://taxmaptributos.com.br/" target="_blank">Site TaxMap</a>
+                </li>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=5511917065688?&text=Ol%C3%A1,%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site" target="_blank">WhatsApp TaxMap</a>
+                </li>
+            </div>
+
+            <div>
+                <li>
+                    <a href="https://www.linkedin.com/newsletters/informativo-mensal-taxmap-6995735438690799616/" target="_blank">Newsletter</a>
+                </li>
+                    <button id="openModalBtn">Informativo</button>
+                </li>
+            </div>
+
+            <div>
+                <li>
+                    <a href="https://www.youtube.com/@TaxMapTributos/streams" target="_blank">Lives</a>
+                </li>
+                <li>
+                    <a href="https://taxmaptributos.com.br/contato/" target="_blank">Contato</a>
+                </li>
+            </div>
+        </ul>
+
+
+        <!-- Modal Forms -->
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Cadastro</h2>
+                <form id="signupForm">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">E-mail:<span>*</span></label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Telefone:<span>*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+    
+                    <label for="company">Empresa:<span>*</span></label>
+                    <input type="text" id="company" name="company" required>
+
+                    <label for="company">Cargo:</label>
+                    <input type="text" id="company" name="company">
+
+                    
+    
+                    <button type="submit">Cadastrar</button>
+
+                    <p><!--- <input name="privacy" type="checkbox"> ---> Ao submeter este formulário, autorizo TaxMap a enviar e-mails para meu endereço eletrônico. Respeitamos a sua privacidade e não enviamos SPAM.</p>
+
+                </form>
+            </div>
+        </div>
+    
+
+        <!-- Modal Forms -->
+
+        <!-- Social Links -->
+        <div id="social-links">
+            <a href="https://taxmaptributos.com.br/" target="_blank">
+                <ion-icon name="globe-outline" target="_blank" id="site"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/company/10875767/admin/feed/posts/" target="_blank">
+                <ion-icon name="logo-linkedin" target="_blank" id="linkedin"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/taxmap_consultoria/" target="_blank">
+                <ion-icon name="logo-instagram" target="_blank"id="instagram"></></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/channel/UCPtM6N-bTMal-s_6ge51Xbg" target="_blank">
+                <ion-icon name="logo-youtube" target="_blank" id="youtube"></ion-icon>
+            </a>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            © 2023 - TaxMap Tributos
+        </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

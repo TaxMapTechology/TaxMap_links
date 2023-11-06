@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #4ecfba;
+    --color-text: #2e4166;
+    --color-text-info: #fff;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+    --social-shadown: rgba(10, 10, 10, 0.479);
+    /* --switch-bg-url:  url(./assets/moon-star.svg); */
+    --switch-bg-url:  url(./assets/DN.png);
+}
+
+.light {
+    --text-color: #2e4166;
+    --color-text: #ffffff;
+    --color-text-info: #2e4166;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --social-shadown: rgba(252, 252, 252, 0.479);
+    /* --switch-bg-url:  url(./assets/sun-star.svg); */
+    --switch-bg-url:  url(./assets/DNd.png);
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
+    transition: 0.8s;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    width: 100%;
+    max-width: 788px;
+    margin: 110px auto 0px;
+    padding: 0 24px;
+}
+
+/* Profile */
+#profile {
+    text-align: center;
+    padding: 24px;
+    transition: 0.8;
+}
+
+#profile img {
+    width: 250px;
+    transition: 0.5s;
+}
+
+#profile img:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+    transition: 0.8s;
+}
+
+/* switch */
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch img {
+    width: 5px;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: var(--text-color) var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    animation: slide-back 0.2s;
+    z-index: 1;
+    transform: translateY(-50%);
+    cursor: pointer;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.302);
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
+}
+
+.light #switch button {
+    animation: slide-in 0.2s forwards;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /* border-radius: 9999px; */
+    border-radius: 5px;
+}
+
+/* Links */
+ul {
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 16px;
+    padding: 24px 0;
+    margin: 15px auto;
+}
+
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.4s;
+    width: 240px;
+    height: 57px;
+    margin-bottom: 15px;
+    margin: 15px auto;
+}
+
+/* pseudo-selecto */
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 1px solid var(--text-color);
+    transform: scale(1.1)
+}
+
+/* social links */
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 0;
+    font-size: 24px;
+    margin-top: -20px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: 1s;
+    border-radius: 5px;   
+}
+
+#social-links a:hover {
+    background: var(--highlight-color);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px var(--social-shadown);
+}
+
+/* social links colors */
+/* #github:hover {
+    color: #9497aa;
+    transition: 1s;
+}
+
+#tiktok:hover{
+    color: #0fffff;
+    transition: 1s;
+}
+
+#youtube:hover {
+    color: #ff4f4f;
+    transition: 1s;
+}
+
+#linkedin:hover{
+    color: #738fe4;
+    transition: 1s;
+} */
+
+/* footer */
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* span footer */
+#cor0 {
+    color: #6985db;
+}
+
+#cor1 {
+    color: #ff822e;
+}
+
+#cor2 {
+    color: #ee6cff;
+} 
+
+#cor3 {
+    color: #00ff6a;
+}
+
+/* media queries */
+@media (min-width: 700px){
+    :root {
+        --bg-url: url(./assets/bg-web01.jpg)
+    }
+    .light{
+        --bg-url: url(./assets/bg-web-light01.jpg)
+    }
+}
+
+/* media queries */
+@media (max-width: 400px){
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px 0;
+        margin: auto;
+        width: 230px;
+    }
+
+    body {
+        background: var(--bg-url) no-repeat top center/cover;
+        height: 100%;
+        transition: 0.8s;
+    }
+
+    div {
+        margin-top: -32px;
+    }
+}
+
+/* animation */
+@keyframes slide-in {
+    from {
+        left: 0;
+    } to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    } to {
+        left: 0;
+    }
+}
+
+
+
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estilo do traço (a "alça" da barra de rolagem) */
+  ::-webkit-scrollbar-thumb {
+    background: var(--text-color); /* Cor do traço */
+    border-radius: 5px; /* Borda arredondada do traço */
+    transition: 0.5s;
+  }
+  
+  /* Estilo da área onde não há conteúdo (à esquerda da alça) */
+  ::-webkit-scrollbar-track {
+    background: var(--color-text); /* Cor da área de rastreamento */
+    transition: 0.5s;
+  }
+  
+
+  /* Modal */
+
+  /* Estilize o modal como desejar */
+.modal {
+    display: none; /* Ocultar o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: var(--color-text);
+    margin: 15% auto;
+    padding: 40px;
+    /* border: 1px solid #888; */
+    width: 600px;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 120, 120);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos adicionais para o formulário (opcional) */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    width: 400px;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-text-info);
+    border-radius: 5px;
+    width: 400px;
+    height: 35px;
+    margin: 10px auto;
+    color: #000;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    background-color: var(--text-color);
+    color: var(--color-text);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 400px;
+    margin: 10px auto;
+    transition: 0.5s;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff8630;
+    /* transform: scale(1.1); */
+    color: #fff;
+}
+
+#openModalBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.4s;
+    width: 240px;
+    height: 57px;
+    margin-bottom: 15px;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 17px;
+}
+
+#openModalBtn:hover {
+    border-color: 1px solid black;
+}
+
+#openModalBtn:hover {
+    transform: scale(1.1);
+}
+
+#signupForm p {
+    font-size: 12px;
+    width: 400px;
+    margin: auto;
+    text-align: justify;
+    color: var(--color-text-info);
+    margin: 5px auto;
+}
+
+input[type='subtmit'] {
+    display: block;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+input:checked {
+    border: none;
+    outline: 2px solid deeppink;
+}
+
+span {
+    color: #ff8630;
+}
+
+
+/* Mobile */
+
+/* CSS para dispositivos móveis */
+@media (max-width: 600px) { /* Altere 600px para a largura máxima desejada */
+    .modal-content {
+      width: 90%; /* Reduz a largura do modal */
+      margin: 10% auto; /* Alinha o modal verticalmente no centro da tela */
+      padding: 20px; /* Aumenta o espaçamento interno */
+    }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%; /* Faz com que os campos de entrada ocupem a largura total */
+
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-text-info);
+    border-radius: 5px;
+    width: 400px;
+    height: 35px;
+    margin: 10px auto;
+    color: #000;
+    font-weight: bold;
+}
+
+    /* Estilo para os inputs inválidos (não preenchidos) */
+input:invalid {
+    border: 1px solid red; /* Define a cor da borda como vermelha */
+}
+  
+    button[type="submit"] {
+      width: 100%; /* Faz com que o botão ocupe a largura total */
+    }
+
+    #signupForm p {
+        font-size: 12px;
+        width: 100%;
+        margin: auto;
+        text-align: justify;
+        color: var(--color-text-info);
+        margin: 5px auto;
+    }
+
+    label {
+        margin-top: 10px;
+        width: 100%;
+        margin: auto;
+    }
+  }
